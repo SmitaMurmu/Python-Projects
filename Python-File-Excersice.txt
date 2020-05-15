@@ -1,0 +1,65 @@
+Read File 
+import re
+with open("C:/Users/smita/Downloads/words2.txt") as file :
+    for line in file :
+        line = re.sub('[,.]',' ',line)
+        print(len(line.split()))
+============================================================================================
+write into file 
+o/p-
+ab
+cd
+.
+.
+xz
+ import string
+
+with open("C:/Users/smita/Downloads/original.txt","w") as file :
+        for letter1,letter2 in zip(string.ascii_lowercase[::2],string.ascii_lowercase[1::2]):
+            file.write(letter1+letter2+"\n")
+================================================================================================
+write into file 
+o/p-
+abc
+def
+.
+.
+yz
+
+import string
+ 
+letters = string.ascii_lowercase + " "
+ 
+slice1 = letters[0::3]
+slice2 = letters[1::3]
+slice3 = letters[2::3]
+ 
+with open("C:/Users/smita/Downloads/original.txt", "w") as file:
+    for s1, s2, s3 in zip(slice1, slice2, slice3):
+        file.write(s1 + s2 + s3 + "\n")
+=====================================================================================================
+#write file - each alphabet in new file.
+import os,string
+if not os.path.exists('C:/Users/smita/desktop/python/alphbetFiles'):
+     os.makedirs("C:/Users/smita/desktop/python/alphbetFiles")
+    
+for letter in string.ascii_lowercase:
+    with open('C:/Users/smita/desktop/python/alphbetFiles/'+letter+".txt",'w')  as file :
+        file.write(letter+'\n')
+=============================================================================================================
+#Extract characters from Text file -
+import os,string
+if  os.path.exists('C:/Users/smita/desktop/python/alphbetFiles'):
+    for line in string.ascii_lowercase :
+        with open ('C:/Users/smita/desktop/python/alphbetFiles/'+letter+".txt",'r') as file :
+            print(line)
+===============================================================================================================
+#Extract characters from Text file -
+import os,string
+letters = []
+if  os.path.exists('C:/Users/smita/desktop/python/alphbetFiles'):
+    for line in string.ascii_lowercase :
+        with open ('C:/Users/smita/desktop/python/alphbetFiles/'+letter+".txt",'r') as file :
+            line.rstrip(),
+            letters.append(line)
+===========================================================================================================
