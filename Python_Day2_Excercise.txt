@@ -1,0 +1,49 @@
+exercise 1 -
+number =[1,2,3,4]
+sqrt_number = [x*2 for x in number]
+print (sqrt_number)  
+
+========================================
+exercise 2 -
+natural_input =  int(input('Enter Natural Number:'))
+total = 0
+for num in range(1,natural_input+1):
+    total += num
+print('Sum of Natural Number : {}'.format(total))
+==================================================
+excercise 3 -
+string_input = input('Enter any string: ')
+print(string_input[::-1])
+==================================================
+excercise 4 -
+user_input = int(input('Enter Number between 1 to 100: '))
+total = 0
+for num in range(1,user_input+1):
+        total += num
+print('Total of 1 to {} is {}'.format(user_input,total))
+==========================================================
+excercise 5 -
+num_input = (input('please enter number having more than 1 digit: '))
+total = 0 
+for num in num_input:
+    total+= int(num)
+print(total)
+=============================================================
+Excercise 6:	
+name_input = input('Enter any string:').lower()
+
+import string
+for letter in  string.ascii_lowercase :
+    if  letter in name_input:
+        print(letter,name_input.count(letter))
+--------------------------------------------------------------
+def word_counter(name):
+    counter={}
+    name_input = name.replace(' ','')
+    for char in name_input.lower():
+        counter[char]=name.count(char)
+    return counter
+word_counter('Smita Murmu')
+    
+
+=============================================================
