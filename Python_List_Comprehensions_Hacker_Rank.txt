@@ -1,0 +1,134 @@
+For loop -
+x = int ( input())
+y = int ( input())
+z= int(input())
+n = int ( input())
+ar = [] 
+p = 0 
+for i in range ( x + 1 ) : 
+    for j in range( y + 1): 
+        for k in range(z+1):
+            if i+j+k != n:
+                ar.append([i,j,k])
+print(ar)
+
+Nested List Comprehensions-->
+
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    print([[a,b,c] for a in range(0,x+1) for b in range (0,y+1) for c in range(0,z+1) if a+b+c != n])
+==========================================================================================================
+find the score of the runner-up.
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    m = max(arr)
+    for i in arr[:] :
+        #print(f'{i}-->i')
+        if m == i :
+            arr.remove(i)
+            #print(f'{i}-->max')
+                
+    print(max(arr))
+=====================================================================================================================
+second lowest grade.
+if __name__ == '__main__':
+    d={}
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        d[name] = score
+    minval = min(d.values())
+    d_without_minval = {k:v for k,v in d.items() if minval != v}
+    second_lowest_value = min(d_without_minval.values())
+    second_lowets_keys = [k for k,v in d_without_minval.items() if second_lowest_value == v]
+    sorted_names=(sorted(second_lowets_keys))
+    for name in sorted_names:
+        print(name)
+
+sample input-
+Harry
+37.21
+Berry
+37.21
+Tina
+37.2
+Akriti
+41
+Harsh
+39
+sample output -
+Berry
+Harry
+========================================================================================================================
+average -
+sample input -
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+sample output -
+56.00
+------->
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    total= 0.0
+    if n>=2 and n<=10:
+        for _ in range(n):
+            name, *line = input().split()
+            scores = list(map(float, line))
+            student_marks[name] = scores
+    query_name = input()
+    for k,v in student_marks.items():
+        if  query_name == k :
+            for v in student_marks[k]:
+                total += v
+    print(format((total/3),'.2f'))
+======================================================================================================================================
+insert / update /delete command in list -
+---------------------------------------------
+if __name__ == '__main__':
+    n = int(input())
+    l = []
+    for _ in range(n):
+        cmd,*args = input().split()
+        if cmd !="print":
+            cmd += "("+ ",".join(args) +")"
+            eval("l."+cmd)
+        else:
+            print(l)
+-------------------------------------------------
+if __name__ == '__main__':
+    l=[]
+    N = int(input())
+    for c in range(N):
+
+            cmd,*i = input().split()
+            if cmd.lower()== 'print':
+                print(l)
+               
+            elif cmd.lower() == 'insert':
+                l.insert(int(i[0]),int(i[1]))
+              
+            elif cmd.lower() == 'remove':
+                l.remove(int(i[0]))
+              
+            elif cmd.lower() == 'append':
+                l.append(int(i[0]))
+              
+            elif cmd.lower() == 'sort':
+                l.sort()
+              
+            elif cmd.lower() == 'pop':
+                l.pop()
+             
+            elif cmd.lower() == 'reverse':
+                l.reverse()
+ ==========================================================================================================
+
+
